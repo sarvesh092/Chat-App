@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import{User, Mail, KeyRound } from "lucide-react";
+import { User, Mail, KeyRound } from "lucide-react";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ const Signup = () => {
       >
         <div>
           <span className="label mb-1">Name</span>
-          <label className="input validator rounded-xl">
+          <label className="input validator rounded-xl outline-none border border-gray-300 focus-within:border-2 focus-within:border-[#1FB854]">
             <User />
             <input
               type="text"
@@ -46,40 +46,40 @@ const Signup = () => {
 
         <div>
           <span className="label mb-1">Email</span>
-          <label className="input validator rounded-xl">
+          <label className="input validator rounded-xl outline-none border border-gray-300 focus-within:border-2 focus-within:border-[#1FB854]">
             <Mail />
-          <input
-            type="email"
-            placeholder="Enter your email"
-            name="email"
-            onChange={handleChange}
-            value={formData.email}
-            required
-          />
-          <span className="validator-hint hidden">Required</span>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+              required
+            />
+            <span className="validator-hint hidden">Required</span>
           </label>
         </div>
 
         <div>
           <span className="label mb-1">Password</span>
-          <label className="input validator rounded-xl">
+          <label className="input validator rounded-xl outline-none border border-gray-300 focus-within:border-2 focus-within:border-[#1FB854]">
             <KeyRound />
-          <input
-            type="password"
-            placeholder="Enter your Password"
-            name="password"
-            onChange={handleChange}
-            value={formData.password}
-            required
-          />
-          <span className="validator-hint hidden">Required</span>
+            <input
+              type="password"
+              placeholder="Enter your Password"
+              name="password"
+              onChange={handleChange}
+              value={formData.password}
+              required
+            />
+            <span className="validator-hint hidden">Required</span>
           </label>
         </div>
         <p className="mt-2">
           Already have an account? <NavLink to="/login">Login</NavLink>
         </p>
         <button
-          className="btn btn-neutral mt-4 w-full rounded-xl"
+          className="btn btn-primary mt-4 w-full rounded-xl"
           type="submit"
         >
           Signup
