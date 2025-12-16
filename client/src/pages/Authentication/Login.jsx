@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import{ Mail, KeyRound } from "lucide-react";
+import { Mail, KeyRound } from "lucide-react";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -29,7 +29,7 @@ const Login = () => {
       >
         <div>
           <span className="label mb-1">Email</span>
-          <label className="input validator rounded-xl">
+          <label className="input validator rounded-xl outline-none border border-gray-300 focus-within:border-2 focus-within:border-[#1FB854]">
             <Mail />
             <input
               type="email"
@@ -45,17 +45,17 @@ const Login = () => {
 
         <div>
           <span className="label mb-1">Password</span>
-          <label className="input validator rounded-xl">
-          <KeyRound />
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            name="password"
-            onChange={handleChange}
-            value={formData.password}
-          />
-          <span className="validator-hint hidden">Required</span>
+          <label className="input validator rounded-xl outline-none border border-gray-300 focus-within:border-2 focus-within:border-[#1FB854]">
+            <KeyRound />
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              name="password"
+              onChange={handleChange}
+              value={formData.password}
+            />
+            <span className="validator-hint hidden">Required</span>
           </label>
         </div>
 
@@ -64,7 +64,7 @@ const Login = () => {
         </p>
 
         <button
-          className="btn btn-neutral mt-4 w-full rounded-xl"
+          className="btn btn-primary mt-4 w-full rounded-xl"
           type="submit"
         >
           Login
