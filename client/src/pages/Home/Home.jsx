@@ -1,15 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import UserSidebar from "./UserSidebar";
+import MessageLayout from "../MessageScreen/MessageLayout";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
-    <div>
-      <div className="bg-yellow-500">hi is tailwind is working</div>
-      <button className="btn btn-neutral" onClick={() => navigate("/login")}>
-        login
-      </button>
+    <div className="flex">
+      <UserSidebar />
+      <MessageLayout />
     </div>
   );
 };
