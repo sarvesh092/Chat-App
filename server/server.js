@@ -9,9 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res)=>{
-    res.send("hello")
-})
+//routes
+import userRoute from "./Routes/auth.routes.js"
+
+app.use("/api/v1/auth", userRoute)
 
 app.listen(port, () => {
   console.log("App is listining on port:", port);
